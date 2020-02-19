@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="color:darkcyan;text-align: center; ">Đăng ký du lịch</h2>
+   <form>
+       <table align="center" border="1" cellpadding="3" cellspacing="0" style="background-color:papayawhip;color:darkcyan ;">
+         <tr>
+             <td>Họ và tên</td>
+             <td><input type="text" id="hoten"></td>
+         </tr>
+         <tr>
+             <td>Địa chỉ</td>
+             <td><input type="text" id="diachi"></td>
+         </tr>
+         <tr>
+             <td>điện thoại</td>
+             <td><input type="number" id="dienthoai"></td>
+         </tr>
+         <tr>
+             <td>Khách Việt Nam</td>
+             <td><input type="radio" id="khachvietnam"></td>
+         </tr>
+         <tr>
+             <td>Chọn tour</td>
+             <td>
+               <select>
+                   <optgroup  label="Miền Bắc">
+                       <option>Hà Nội-Hạ Long-SaPa</option>
+                       <option>Hà Nội-Chùa Hương-Ninh Bình</option>
+                       <option>Hà Nội-Cát Bà-Tuần Châu</option>
+                   </optgroup>
+                   <optgroup label="Miền Trung">
+                       <option>Huế-Bạch Mã-Đà Nẵng</option>
+                       <option>Nha Trang-Đà Lạt</option>
+                       <option>Buôn Mê Thuột-Gia Lai-KonTum</option>
+                   </optgroup>
+                   <optgroup label="Miền Nam">
+                       <option>TP.HCM-Cần Thơ-Cà Mau</option>
+                       <option>TP.HCM-Mỹ Tho</option>
+                   </optgroup>
+               </select>
+             </td>
+         </tr>
+         <tr>
+             <td>Phương tiện</td>
+             <td><input type="radio" name="Phuongtien" value="Máy bay" id="maybay"/>Máy bay
+                <input type="radio" name="Phuongtien" value="Ô tô" id="oto"/>Ô tô
+            </td>
+         </tr>
+         <tr>
+             <td colspan="2" style="width: 350px; height: 55px;" ><fieldset>
+                 <legend style="color:darkorange;" >Số lượng đoàn khách</legend>
+                 Người lớn<input type="text" id="nguoilon" size="2px">Trẻ em<input type="text" id="treem" size="2px">
+             </fieldset></td>
+         </tr>
+         <tr>
+             <td>Ghi Chú thêm</td>
+             <td><textarea style="width: 300px;"></textarea></td>
+         </tr>
+         <tr>
+             <td colspan="2" style="text-align: center;"><input type="button" value="Đồng ý" id="button"></td>
+         </tr>
+         <tr>
+             <td colspan="2" style="text-align: center;"> 
+                <div id=Label></div>
+            </td>
+         </tr>
+            <script>
+                document.getElementById("button").onclick=function(){
+                    var showLabel=document.getElementById("Label");
+                    showLabel.innerText="chúc bạn đã đăng ký thành công"
+                }
+            </script>
+       </table>
+   </form>
+</body>
+</html>
