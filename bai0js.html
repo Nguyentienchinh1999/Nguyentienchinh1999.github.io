@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var n = prompt("nhap vao 1 sô",0);
+      
+var check = true;
+if(n < 2){
+    check = false;
+} else{
+    for(var i = 2; i < n-1; i++){
+        if(n % i == 0){
+            check = false;
+            break;
+        }
+    }
+}
+if(check == true){
+    console.log("YES")
+}else{
+    console.log("NO")
+}
+   </script>
+</body>
+</html>
