@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="stopwatch">00:00:00</div> 
+    <div id="buttons">
+        <button id="start" onclick="start()">Start</button>
+        <button id="pause" onclick="pause()">Pause</button>
+        <button id="reset" disabled='true' onclick="reset()">Reset</button>
+    </div> 
+    <script>
+        var ms = 0 , sec = 0 , min = 0;
+var timer; 
+
+var stopwatch = document.querySelector('.stopwatch')
+var startButton = document.getElementById('start');
+var pauseButton = document.getElementById('pause');
+var resetButton = document.getElementById('reset')
+
+function start(){
+    if(!timer){
+        timer = setInterval(run,10);
+    }
+    resetButton.disabled = false;
+    pauseButton.disabled = false;
+}
+function format(){
+    var formatMin = min; formatSec = sec; formatMs = ms;
+    if(min<10){
+        formatMin = `0${min}`;
+    }else{
+        formatMin = `${min}`
+    }
+    if(sec<10){
+        formatSec = `0${sec}`;
+    }else{
+        formatSec = `${sec}`
+    }
+    if(ms<10){
+        formatMs = `0${ms}`;
+    }else{
+        formatMs = `${ms}`
+    }
+    return `${formatMin}:${formatSec}:${formatMs}`
+}
+function run(){
+    stopwatch.textContent = format();
+    ms++;
+    if(ms == 100){
+        ms = 0;
+        sec++;
+    }
+    if(sec == 60){
+        sec = 0;
+        min ++ ;
+    }
+}
+function pause(){
+    clearInterval(timer);
+    timer = false;
+    startButton.innerHTML = 'Resume'
+}
+function reset(){
+    clearInterval(timer);
+    timer = false;
+    min = 0;
+    sec = 0;
+    ms = 0;
+    stopwatch.textContent = format();
+    pauseButton.disabled = true;
+    startButton.innerHTML = 'Start';
+}
+    </script>
+</body>
+</html>

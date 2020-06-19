@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [1,2,3,4,5,6,7,8,9,9,8,7,6,5,4,3,2,1]
+        var tong = 0; 
+        var count = 0;
+        var tbc = 0;
+        for(var i = 0; i < a.length; i++){
+             count +=1
+             tong += a[i]
+        }
+        tbc += tong/count
+        var maxA = Math.max.apply(null, a)
+        var minA = Math.min.apply(null, a)
+        console.log(maxA, minA,tbc)
+    </script>
+</body>
+</html>

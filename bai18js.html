@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+   function find(str1, str2){
+            var n = str1
+            str1 = str1.lastIndexOf(str2)
+            str11 = n.substring(0, str1)
+            str111 = str11.lastIndexOf(str2)
+            return str111
+        }   
+        console.log(find("This is a beautiful day","is"))
+    </script>
+</body>
+</html>

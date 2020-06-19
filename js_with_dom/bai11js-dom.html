@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>To Do List</h3>
+    <ul id="js-todo">
+        <li>First job <button>-</button></li>
+        <li>Second job <button>-</button></li>
+
+    </ul>
+    <input id="js-input-add" type="text" placeholder="Enter new task">
+    <button id="js-btn-add">Add</button>
+    <script>
+        var unorderList = document.getElementById('js-todo')
+        var inputAdd = document.getElementById('js-input-add')
+        var btnAdd = document.getElementById('js-btn-add')
+        btnAdd.onclick = () => {
+            let newTask = inputAdd.value
+            let listItem = document.createElement("li")
+            let buttonItem = document.createElement('button')
+            listItem.innerText = newTask
+            buttonItem.innerText = "-"
+            buttonItem.onclick = () =>{
+                unorderList.removeChild(listItem)
+
+            }
+            unorderList.append(listItem)
+            listItem.append(buttonItem)
+        }
+    </script>
+</body>
+</html>

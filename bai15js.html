@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function capitalize(str){
+
+var strArr = str.split(" ");
+var newArr = [];
+
+for(var i = 0 ; i < strArr.length ; i++ ){
+
+  var firstLetter = strArr[i].charAt(0).toUpperCase();
+
+  var word = strArr[i].slice(1).toLowerCase();
+    
+  newArr[i] = firstLetter + word;
+
+}
+
+return newArr.join(' ');
+
+}
+console.log(capitalize("nguyen TIEN CHinh"));
+    </script>
+</body>
+</html>

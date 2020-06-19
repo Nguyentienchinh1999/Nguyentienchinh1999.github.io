@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var students = [
+            {
+                id: "T3HXX1",
+                firstName: "NgAN",
+                lastName: "Duong Thuy"
+            },
+            {
+                id: "T3HXX2",
+                firstName: "Ha",
+                lastName: "Do Thi Thu"
+            },
+            {
+                id: "T3HXX5",
+                firstName: "Minh",
+                lastName: "Nguyen Nhat"
+            }
+        ]
+
+        var b = []
+        var arr = []
+        function nameFormat(name) {
+            name = name.toLowerCase()
+            return arr = name.charAt(0).toUpperCase() + name.slice(1)
+        }
+
+        function check(name) {
+            var firstName = name.firstName
+            if ((firstName.includes('a') == true || firstName.includes('A') == true) && firstName[2] != null) {
+                return name
+            }
+        }
+
+        // students = students.filter(nameFormat)
+        
+        for(var i in students){
+            students[i].firstName = nameFormat(students[i].firstName)
+        }
+        // console.log(students)
+        b = students.filter(check)
+        console.log(b)
+
+    </script>
+</body>
+</html>

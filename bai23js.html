@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1,2,3,4,5,6,7,8,9,9,9,8,7,6,5,4,3,2,1];
+        var mf = 1;
+        var m = 0;
+        var item;
+    for (var i=0; i<arr.length; i++)
+        {
+        for (var j=i; j<arr.length; j++)
+        {
+                if (arr[i] == arr[j]){
+                 m++;}
+                else if (mf<m)
+                {
+                  mf=m; 
+                  item = arr[i];
+                }
+        }
+        m=0;
+}
+console.log(item+" ( " +mf +" times ) ") ;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           var k = 8;
+let array = [1,2,3,4,6,7,9];
+var closest1 = array.sort( (a, b) => Math.abs(k - a) -  Math.abs(k - b) )[0];
+
+var closest2 = array.sort( (a, b) => Math.abs(k - a) -  Math.abs(k - b) )[1];
+
+if(k>closest2 ){
+    console.log(closest1);   
+}
+else{
+    console.log(closest1,closest2)
+}
+    </script>
+</body>
+</html>

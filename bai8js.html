@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        answear=prompt('Enter your number:');
+var number=Number(answear);
+var check=true;
+while(number>0){
+    var remain=number%10;
+    if(remain%2==0){
+        check=false;
+        break;
+    }
+    number=Math.floor(number/10);
+}
+if(check==true){
+    document.write('YES');
+}
+else if(check==false){
+    document.write('NO')
+}
+console.log(check);
+    </script>
+</body>
+</html>
