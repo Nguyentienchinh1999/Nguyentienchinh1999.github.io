@@ -31,9 +31,9 @@ public class ex1 {
 		}while(total < 100);
 		return total;
 	}
-	public long factorial() {
+	public int factorial() {
 		int n = 10;
-		long fac = 1;
+		int fac = 1;
 		for(int i = 1; i <= n; i++) {
 			fac *= i;
 		}
